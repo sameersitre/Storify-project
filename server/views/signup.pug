@@ -1,0 +1,23 @@
+extends completedStories
+block content 
+    h3 The signup page   
+    h3 Create Account
+    form(method='POST' action='/login/register')
+        input(type='text',name='email', placeholder='Enter you email', required) 
+        br
+        input(type='text',name='name', placeholder='Enter you name', required) 
+        br
+        input(type='password',name='password', placeholder='Type in your password', required)
+        br
+        input(type='submit')
+    br
+    br
+    br
+    h3 Login to your ac.
+    form(method='POST' action='/login/check')
+        input(type='text',name='email', placeholder='Enter you email', required) 
+        br
+        input(type='password',name='password', placeholder='Type in your password', required, )
+        br
+        input(type='submit')
+    

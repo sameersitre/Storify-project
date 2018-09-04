@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Document
+    body
+        p hi #{session}
+        a(href="/") Home &nbsp;
+        a(href="/ongoing") ongoing stories &nbsp;
+        a(href="/create-new-story") create-new-story&nbsp;
+        a(href="/profile") Profile&nbsp;
+        a(href="/login") Signup/Login&nbsp;
+        form(method='POST' action='/signout')
+            input(type='submit', value = 'signout')
+    block content
+        h3 Completed Stories show up here. &nbsp;
+        ol
+            each i in data
+                li  
+                    a(href=`/completed-stories/${i._id}`) #{i.description}

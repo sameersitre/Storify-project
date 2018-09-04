@@ -1,0 +1,8 @@
+extends completedStories
+block content 
+    h3 All the ongoing Stories show up here. &nbsp;
+    ol
+        each i in data
+            li  
+                | #{i.description}
+                a(href=`/ongoing/${i._id}`) edit

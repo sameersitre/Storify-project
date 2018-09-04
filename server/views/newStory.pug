@@ -1,0 +1,18 @@
+extends completedStories
+block content    
+    h3 This is the space to start a story. It has prompts. Once you start a story, it gets listed on ongoing stories and no more over here. 
+    |Your character 1 : #{character1}
+    |Your character 2 : #{character2}
+    |Location Scene : #{location}
+    form(method='POST' action=`/create-new-story/${cid}`)
+        textarea(cols='200', rows='20', name="text") 
+        br
+        p Continue editing
+        input(type='radio', name='ongoing', value="yes", required="required")
+        |  yes
+        br
+        input(type='radio', name='ongoing', value="no", required="required")
+        |  no
+        br
+        input(type='submit')
+    

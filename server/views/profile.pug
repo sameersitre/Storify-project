@@ -1,0 +1,15 @@
+extends completedStories
+block content 
+    h3 User's profile. &nbsp;
+    p Your completed Stories
+    ol
+        each i in completed
+            li  
+                //- | #{i.description}
+                a(href=`/completed-stories/${i._id}`) #{i.description}
+    p Ongoing Stories
+    ol
+        each i in ongoing
+            li  
+                //- | #{i.description}
+                a(href=`/ongoing/${i._id}`) #{i.description} edit

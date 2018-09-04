@@ -1,0 +1,17 @@
+extends completedStories
+block content 
+    h3 The ongoing story that is being edited comes here. &nbsp;
+    |Your character 1 : #{data.character1}
+    |Your character 2 : #{data.character2}
+    |Location Scene : #{data.location}
+    form(method='POST' action=`/ongoing/${data._id}`)
+        textarea(cols='200', rows='20', name="text") #{data.description} 
+        br
+        p Ongoing
+        input(type='radio', name='ongoing', value="yes")
+        |  yes
+        br
+        input(type='radio', name='ongoing', value="no")
+        |  no
+        br
+        input(type='submit')
