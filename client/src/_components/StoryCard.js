@@ -20,12 +20,8 @@ class StoryCard extends Component {
         alert(id + " " + imgname + " card clicked");
     }
 
-   
     render() {
-
         if (this.state.productIndex !== '') {
-
-
             return <Redirect to='/ViewStory'  />
         }
         
@@ -34,13 +30,9 @@ class StoryCard extends Component {
                 onClick={(e) =>
                     this.cardClick(this.props.products.id, this.props.products.ImageAddress, e)} 
                 >
-               
                     <h2>{this.props.products.StoryName}</h2>
                     <div >{this.props.products.Description}</div><br />
- 
-
-               
-                   
+               <div className="avatarPosition" >  
                     { this.props.products.Users.map((image0, i) =>
                         <Tooltip title={image0.ImageAddress.slice(0, -5)} >
 
@@ -48,8 +40,7 @@ class StoryCard extends Component {
                                 src={require('../photos/' + image0.ImageAddress)}
                                 alt="nothing" />
                         </Tooltip>) }
-               
-                
+                </div>     
             </div>
         );
     }
