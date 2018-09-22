@@ -12,20 +12,22 @@
       background-color: #cecece5c;
 
     }
-    .hor-slide-container > div:hover {
-      transform: scale(1.005);
-      transition: 0.1s;
-      box-shadow: #1fce99a1 -2px 3px 32px 3px;
-  }
-    .card{
-        height: 200px;
-        padding: 0px 10px 10px 10px ;
-        margin: 20px;
-        border-color: black;
-       box-shadow: 0px 5px 20px rgb(202, 202, 202);
-       border-radius: 5px;
-       display: inline-block;
+    
+ 
+  
+  
+  .slide-container{
+    
+    width: inherit;
+     height: 850px;
+     display: grid;
+    justify-content: left;
+    overflow-y: scroll;
+    overflow-y: auto;
+
     }
+    
+   
   
     .bar{
       height: 50px;

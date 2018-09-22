@@ -1,7 +1,18 @@
-/*.info{
-    background-color: yellowgreen;
-
+.card{
+    height: 250px;
+    width:340px;
+    padding: 0px 10px 10px 10px ;
+    margin: 10px;
+    border-color: black;
+   box-shadow: 0px 5px 20px rgb(202, 202, 202);
+   border-radius: 5px;
+   display: inline-block;
+   background-size: 100%;
+   
+  }
+  
+  .card > self:hover {
+    transform: scale(1.005);
+    transition: 0.1s;
+    box-shadow: #1fce99a1 -2px 3px 32px 3px;
 }
-.left{
-    background-color:red;
-}*/
