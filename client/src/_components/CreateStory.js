@@ -3,7 +3,6 @@ import NavBar from './NavBar';
 import './CreateStory.css';
 import { Button } from '../../node_modules/@material-ui/core';
 import { Link } from 'react-router-dom';
-import WriteStory from './WriteStory';
 
 const prompt = [{characters:["Characters:"," Batman"," ,Chacha Chowdary"],
                  Location:"Hyderabad", Plot:"Chacha Invites"},

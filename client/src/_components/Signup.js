@@ -3,7 +3,6 @@ import { Button, Input } from '@material-ui/core/';
 import './Signup.css';
 import './Login.css'
 import { Link } from 'react-router-dom';
-import signupButton from './uielements/signupButton.js';
 
 class Signup extends Component {
     render() {

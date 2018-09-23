@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
-import Button from '@material-ui/core/Button';
-import Card from '@material-ui/core/Card';
-import transitions from '../../node_modules/@material-ui/core/styles/transitions';
 import Avatar from '@material-ui/core/Avatar';
 import Tooltip from '@material-ui/core/Tooltip';
 import './StoryCard.css';
@@ -32,10 +29,10 @@ class StoryCard extends Component {
                 >
                     <h2>{this.props.products.StoryName}</h2>
                     <div >{this.props.products.Description}</div><br />
+                    
                <div className="avatarPosition" >  
                     { this.props.products.Users.map((image0, i) =>
                         <Tooltip title={image0.ImageAddress.slice(0, -5)} >
-
                             <Avatar style={{ display: "inline-block", float: "right", bottom:'1px'}}
                                 src={require('../photos/' + image0.ImageAddress)}
                                 alt="nothing" />

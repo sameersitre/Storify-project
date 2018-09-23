@@ -19,9 +19,7 @@ const styles = {
     marginLeft: -12,
     marginRight: 20,
   },
-  flex: {
-    flexGrow: 1,
-  },
+
 
   background: {
     background: '#444444',
