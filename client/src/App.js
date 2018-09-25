@@ -8,8 +8,8 @@ import Signup from './_components/Signup';
 import ViewStory from './_components/ViewStory';
 import CreateStory from './_components/CreateStory';
 import OngoingStories from './_components/OngoingStories';
-import WriteStory from './_components/WriteStory'
-
+import WriteStory from './_components/WriteStory';
+import NavBar2 from './_components/NavBar2.js';
 class App extends Component {
   render() {
     return (
@@ -28,7 +28,7 @@ class App extends Component {
             </ul>
             
             <div >
-              <Route exact path="/" component={NavBar} />
+              <Route exact path="/" component={NavBar2} />
               <Route path="/Home" component={Home} />
               <Route exact path="/Login" component={Login} />
               <Route exact path="/Signup" component={Signup} />

@@ -7,6 +7,8 @@ import NavBar from './NavBar';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
+import NavBar2 from '../_components/NavBar2.js';
+import NavBar3 from '../_components/NavBar3.js';
 const styles = theme => ({
     paper: {
         height: 350,
@@ -19,7 +21,9 @@ class Home extends Component {
         return (
             <div>
                 
-             <NavBar />
+                <NavBar />
+                <NavBar2 />
+                <NavBar3/>
                 <div className='slide-container'>
             {/* <div>
                 <NavBar />

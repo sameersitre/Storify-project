@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import NavBar from './NavBar';
+import NavBar2 from '././NavBar2';
 
 class OngoingStories extends Component {
     render() {
         return (
             <div>
-                <NavBar/>
+                <NavBar2/>
                 <div>
                 you r in ongoing
                 </div>
