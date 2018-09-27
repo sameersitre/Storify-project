@@ -21,9 +21,9 @@ class Home extends Component {
         return (
             <div>
                 
-                <NavBar />
+                {/* <NavBar /> */}
                 <NavBar2 />
-                <NavBar3/>
+                {/* <NavBar3/> */}
                 <div className='slide-container'>
             {/* <div>
                 <NavBar />
