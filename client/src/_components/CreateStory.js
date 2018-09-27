@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import NavBar from './NavBar';
+import NavBar3 from './NavBar3';
 import './CreateStory.css';
 import { Button } from '../../node_modules/@material-ui/core';
 import { Link } from 'react-router-dom';
@@ -59,7 +59,7 @@ class CreateStory extends Component {
 
         return (
             <div>
-                <NavBar />
+                <NavBar3 />
                 <div className="createStory">
                     Let's Create An Amazing Story
                 </div>

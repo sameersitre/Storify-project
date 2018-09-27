@@ -16,6 +16,7 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
+import { Link } from 'react-router-dom';
 
 const styles = theme => ({
   root: {
@@ -26,7 +27,7 @@ const styles = theme => ({
   },
   menuButton: {
     marginLeft: -12,
-    marginRight: 20, 
+    marginRight: 20,
   },
   title: {
     display: 'none',
@@ -124,8 +125,8 @@ class PrimarySearchAppBar extends React.Component {
         open={isMenuOpen}
         onClose={this.handleMenuClose}
       >
-        <MenuItem onClick={this.handleClose}>Profile</MenuItem>
-        <MenuItem onClick={this.handleClose}>My account</MenuItem>
+        <Link to="/Login" ><MenuItem onClick={this.handleClose}>Sign In</MenuItem></Link>
+        <Link to="/Signup"><MenuItem onClick={this.handleClose}>Sign Up</MenuItem></Link>
       </Menu>
     );
 
@@ -166,23 +167,33 @@ class PrimarySearchAppBar extends React.Component {
       <div className={classes.root}>
         <AppBar position="static">
           <Toolbar>
+            {/*------------- STORIFYHOME BTN------------ */}
 
             <Typography className={classes.title} variant="title" color="inherit" noWrap>
-              STORIFY.com
-            </Typography>
+            <Link to="/Home" className="bigStorify">
+                            <div>Storify<p className="com">.com</p></div>
+                        </Link>          </Typography>
+            
+            
+            {/*------------- ICONS/PAGES------------ */}
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
             <div className={classes.sectionDesktop}>
               <IconButton color="inherit">
-                  <MailIcon />
-              </IconButton>
-
+                <Link to="/OngoingStories" color="white">
+                  <button style={{ background: 'inherit', borderWidth: '0' ,width:'100', color: 'white', fontSize: '60' }}>ONGOING STORIES</button>
+                </Link>              </IconButton>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <IconButton color="inherit">
-                  <NotificationsIcon />
+                {/* <NotificationsIcon /> */}
+                <Link to="/CreateStory" color="white">
+                                <button style={{ background: 'inherit', borderWidth: '0', color: 'white', fontSize: '60' }}>CREATE</button>
+                            </Link>
               </IconButton>
-
-              
             </div>
 
             <div className={classes.grow} />
+            {/*------------- SEARCH BAR------------ */}
             <div className={classes.search}>
               <div className={classes.searchIcon}>
                 <SearchIcon />
@@ -201,7 +212,7 @@ class PrimarySearchAppBar extends React.Component {
 
             </div>
             <div className={classes.sectionDesktop}>
-            <IconButton
+              <IconButton
                 aria-owns={isMenuOpen ? 'material-appbar' : null}
                 aria-haspopup="true"
                 onClick={this.handleProfileMenuOpen}
@@ -209,7 +220,7 @@ class PrimarySearchAppBar extends React.Component {
               >
                 <AccountCircle />
               </IconButton>
-</div>
+            </div>
 
             <div className={classes.sectionMobile}>
               <IconButton aria-haspopup="true" onClick={this.handleMobileMenuOpen} color="inherit">
