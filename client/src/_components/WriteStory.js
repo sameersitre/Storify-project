@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Button from '@material-ui/core/Button';
 import './WriteStory.css';
-import NavBar from './NavBar';
+import NavBar from './uielements/NavBar/NavBar3';
 import { Link } from 'react-router-dom'
 
 class WriteStory extends Component {

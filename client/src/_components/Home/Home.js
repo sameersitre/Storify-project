@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import './Home.css';
 import Stories from '../_data/StoriesDB.json';
-import StoryCard from './StoryCard';
+import StoryCard from '../Card/StoryCard';
 //import MediaCard from './MediaCard';
-import NavBar from './NavBar';
+import NavBar from '../NavBar/NavBar';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import NavBar2 from '../_components/NavBar2.js';
-import NavBar3 from '../_components/NavBar3.js';
+import NavBar2 from '../NavBar/NavBar2';
+import NavBar3 from '../NavBar/NavBar3';
+import NavBar4 from '../NavBar/NavBar4';
 const styles = theme => ({
     paper: {
         height: 350,
@@ -23,7 +24,8 @@ class Home extends Component {
                 
                 {/* <NavBar />
                 <NavBar2 /> */}
-                <NavBar3/>
+                <NavBar3 />
+                <NavBar4/>
                 <div className='slide-container'>
             {/* <div>
                 <NavBar />

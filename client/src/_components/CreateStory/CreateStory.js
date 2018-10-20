@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import NavBar3 from './NavBar3';
+import NavBar3 from 'client/src/_components/NavBar/NavBar3.js';
 import './CreateStory.css';
-import { Button } from '../../node_modules/@material-ui/core';
+import { Button } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 
 const prompt = [{characters:["Characters:"," Batman"," ,Chacha Chowdary"],

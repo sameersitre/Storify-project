@@ -6,10 +6,10 @@ import NavBar from './_components/NavBar';
 import Login from './_components/Login.js';
 import Signup from './_components/Signup';
 import ViewStory from './_components/ViewStory';
-import CreateStory from './_components/CreateStory';
+import CreateStory from './_components/CreateStory/CreateStory';
 import OngoingStories from './_components/OngoingStories';
-import WriteStory from './_components/WriteStory';
-import NavBar2 from './_components/NavBar2.js';
+import WriteStory from './_components/uielementsWriteStory';
+import NavBar2 from './_components/uielements/NavBar/NavBar2';
 class App extends Component {
   render() {
     return (
