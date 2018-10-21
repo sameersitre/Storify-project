@@ -4,7 +4,11 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import Button from '@material-ui/core/Button';
-
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogTitle from '@material-ui/core/DialogTitle';
 import Typography from '@material-ui/core/Typography';
 import Input from '@material-ui/core/Input';
 import Badge from '@material-ui/core/Badge';
@@ -18,7 +22,7 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import { Link } from 'react-router-dom';
-
+import Login from '../Login/Login.js';
 const styles = theme => ({
   root: {
     width: '100%',
@@ -108,6 +112,14 @@ class PrimarySearchAppBar extends React.Component {
   handleMobileMenuClose = () => {
     this.setState({ mobileMoreAnchorEl: null });
   };
+  handleClickOpen = () => {
+    this.handleClose
+    this.setState({ open: true });
+  };
+  handleClose = () => {
+    this.setState({ open: false });
+};
+
 
   render() {
     const { anchorEl, mobileMoreAnchorEl } = this.state;
@@ -123,7 +135,9 @@ class PrimarySearchAppBar extends React.Component {
         open={isMenuOpen}
         onClose={this.handleMenuClose}
       >
-        <Link to="/Login" ><MenuItem onClick={this.handleClose}>Sign In</MenuItem></Link>
+        <MenuItem onClick={this.handleClickOpen}>Sign In</MenuItem>
+        
+
         <Link to="/Signup"><MenuItem onClick={this.handleClose}>Sign Up</MenuItem></Link>
       </Menu>
     );
@@ -176,7 +190,7 @@ class PrimarySearchAppBar extends React.Component {
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
             <div className={classes.sectionDesktop} >
-              
+
               <Link to="/OngoingStories" color="white" >
                 <Button onFocusCapture="false">
                   <button style={{ background: 'inherit', borderWidth: '0', width: '100', color: 'white' }}>
@@ -186,9 +200,9 @@ class PrimarySearchAppBar extends React.Component {
 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                <Link to="/CreateStory" color="white">
-              <Button color="inherit">
-                {/* <NotificationsIcon /> */}
-                <button style={{ background: 'inherit', borderWidth: '0', color: 'white', fontSize: '60' }}>CREATE</button>
+                <Button color="inherit">
+                  {/* <NotificationsIcon /> */}
+                  <button style={{ background: 'inherit', borderWidth: '0', color: 'white', fontSize: '60' }}>CREATE</button>
                 </Button>
               </Link>
             </div>
@@ -199,9 +213,6 @@ class PrimarySearchAppBar extends React.Component {
               <div className={classes.searchIcon}>
                 <SearchIcon />
               </div>
-
-
-
               <Input
                 placeholder="Search…"
                 disableUnderline
@@ -230,6 +241,20 @@ class PrimarySearchAppBar extends React.Component {
             </div>
           </Toolbar>
         </AppBar>
+
+        <Dialog open={this.state.open} onClose={this.handleClose} aria-labelledby="alert-dialog-title"
+          aria-describedby="alert-dialog-description" disableBackdropClick >
+          
+          <DialogTitle id="alert-dialog-title"> </DialogTitle>
+          <DialogContent>
+           {Login}
+          </DialogContent>
+
+          <DialogActions>
+            <Button onClick={this.handleClose} color="primary">Close</Button>
+            <Button onClick={this.handleClose} color="primary" autoFocus>View</Button>
+          </DialogActions>
+        </Dialog>
         {renderMenu}
         {renderMobileMenu}
       </div>
