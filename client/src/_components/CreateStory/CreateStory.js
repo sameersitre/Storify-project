@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import NavBar3 from 'client/src/_components/NavBar/NavBar3.js';
+import NavBar3 from '../NavBar/NavBar3';
 import './CreateStory.css';
 import { Button } from '@material-ui/core';
 import { Link } from 'react-router-dom';

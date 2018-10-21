@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Button } from '@material-ui/core/';
 import './Login.css';
 import { Link } from 'react-router-dom';
-import { LoginButton, LoginInput } from '../../button'
+import { LoginButton, LoginInput } from '../uielements/button'
 
 
 class Login extends Component {

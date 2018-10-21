@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
+import Button from '@material-ui/core/Button';
+
 import Typography from '@material-ui/core/Typography';
 import Input from '@material-ui/core/Input';
 import Badge from '@material-ui/core/Badge';
@@ -14,7 +16,6 @@ import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
-import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import { Link } from 'react-router-dom';
 
@@ -25,10 +26,7 @@ const styles = theme => ({
   grow: {
     flexGrow: 1,
   },
-  menuButton: {
-    marginLeft: -12,
-    marginRight: 20,
-  },
+
   title: {
     display: 'none',
     [theme.breakpoints.up('sm')]: {
@@ -139,20 +137,19 @@ class PrimarySearchAppBar extends React.Component {
         onClose={this.handleMobileMenuClose}
       >
         <MenuItem>
-          <IconButton color="inherit">
-            <Badge className={classes.margin} badgeContent={4} color="secondary">
-              <MailIcon />
-            </Badge>
-          </IconButton>
-          <p>Messages</p>
-        </MenuItem>
-        <MenuItem>
+
+          <Link to="/OngoingStories" color="white" >
+            <p>Ongoing Stories</p>
+          </Link>
           <IconButton color="inherit">
             <Badge className={classes.margin} badgeContent={11} color="secondary">
-              <NotificationsIcon />
             </Badge>
           </IconButton>
-          <p>Notifications</p>
+
+        </MenuItem>
+        <MenuItem>
+
+          <p>Create</p>
         </MenuItem>
         <MenuItem onClick={this.handleProfileMenuOpen}>
           <IconButton color="inherit">
@@ -170,26 +167,30 @@ class PrimarySearchAppBar extends React.Component {
             {/*------------- STORIFYHOME BTN------------ */}
 
             <Typography className={classes.title} variant="title" color="inherit" noWrap>
-            <Link to="/Home" className="bigStorify">
-                            <div>Storify<p className="com">.com</p></div>
-                        </Link>          </Typography>
-            
-            
-            {/*------------- ICONS/PAGES------------ */}
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <Link to="/Home" className="bigStorify">
+                <div>Storify<p className="com">.com</p></div>
+              </Link>          </Typography>
 
-            <div className={classes.sectionDesktop}>
-              <IconButton color="inherit">
-                <Link to="/OngoingStories" color="white">
-                  <button style={{ background: 'inherit', borderWidth: '0' ,width:'100', color: 'white', fontSize: '60' }}>ONGOING STORIES</button>
-                </Link>              </IconButton>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <IconButton color="inherit">
+
+            {/*------------- ICONS/PAGES------------ */}
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <div className={classes.sectionDesktop} >
+              
+              <Link to="/OngoingStories" color="white" >
+                <Button onFocusCapture="false">
+                  <button style={{ background: 'inherit', borderWidth: '0', width: '100', color: 'white' }}>
+                    ONGOING STORIES</button>
+                </Button>
+              </Link>
+
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               <Link to="/CreateStory" color="white">
+              <Button color="inherit">
                 {/* <NotificationsIcon /> */}
-                <Link to="/CreateStory" color="white">
-                                <button style={{ background: 'inherit', borderWidth: '0', color: 'white', fontSize: '60' }}>CREATE</button>
-                            </Link>
-              </IconButton>
+                <button style={{ background: 'inherit', borderWidth: '0', color: 'white', fontSize: '60' }}>CREATE</button>
+                </Button>
+              </Link>
             </div>
 
             <div className={classes.grow} />

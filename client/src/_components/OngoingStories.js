@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import NavBar3 from '././uielements/NavBar/NavBar3';
+import NavBar3 from './NavBar/NavBar3';
 
 class OngoingStories extends Component {
     render() {

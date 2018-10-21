@@ -35,7 +35,7 @@ class StoryCard extends Component {
                     {this.props.products.Users.map((image0, i) =>
                         <Tooltip title={image0.ImageAddress.slice(0, -5)} >
                             <Avatar style={{ display: "inline-block", float: "right", bottom: '1px' }}
-                                src={require('../photos/' + image0.ImageAddress)}
+                                src={require('../../photos/' + image0.ImageAddress)}
                                 alt="nothing" />
                         </Tooltip>)}
                 </div>

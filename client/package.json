@@ -4,11 +4,10 @@
   "private": true,
   "homepage": "https://sameersitre.github.io/Storify-project/",
   "dependencies": {
-    "@material-ui/core": "^1.4.0",
-    "@material-ui/icons": "^3.0.1",
     "ajv": "^6.5.2",
     "antd": "^3.7.2",
     "gh-pages": "^1.2.0",
+    "material-ui": "^0.20.2",
     "npm": "^6.4.1",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",

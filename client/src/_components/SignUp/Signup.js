@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Input } from '@material-ui/core/';
 import './Signup.css';
-import './Login.css'
 import { Link } from 'react-router-dom';
 
 class Signup extends Component {
