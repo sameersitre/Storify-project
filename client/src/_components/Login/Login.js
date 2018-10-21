@@ -8,16 +8,17 @@ import { LoginButton, LoginInput } from '../uielements/button'
 class Login extends Component {
     render() {
         return (
-            <div className="loginbgc">
-                <div >
+            <div >
+                <div style={{ alignContent:'center'}} >
                     <Link to="/Home" className="bigStorify">
                         <h3 > Storify<p className="com">.com</p></h3>
                     </Link>
                 </div>
-                <div className='input' >
-                    <p className="loginText"> Login Into Storify and Get Mesmarised</p>
+                <div className='input'  >
+                    <p className="loginText" > Login </p>
                     <div  >
-                        <LoginInput placeholder="Username" className="custom" />
+                        <LoginInput placeholder="Username" className="custom"
+                        />
                     </div>
                     <div>
                         <LoginInput placeholder="Password" className="inputSpace" type="password" />

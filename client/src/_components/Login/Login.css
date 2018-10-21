@@ -16,15 +16,15 @@
     color:#767676;
 }
 .input{
-    height: 205px;
+    width: 200px;
+    height: 305px;
+
     padding: 0px 10px 10px 10px ;
-    margin: 20px;
-    margin-left: 30%;
-    margin-top: 20px;
-    padding-top: 6px;
-   box-shadow:0px 1px 10px rgba(23, 22, 22, 0.64);
-   border-radius: 15px;
-    width: 35%;
+    margin: 10px;
+   
+    padding-top: 5px;
+  
+    width: 50%;
     display: block;
     text-align: center;
 }

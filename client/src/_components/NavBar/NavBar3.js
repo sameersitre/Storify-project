@@ -118,7 +118,7 @@ class PrimarySearchAppBar extends React.Component {
   };
   handleClose = () => {
     this.setState({ open: false });
-};
+  };
 
 
   render() {
@@ -136,7 +136,7 @@ class PrimarySearchAppBar extends React.Component {
         onClose={this.handleMenuClose}
       >
         <MenuItem onClick={this.handleClickOpen}>Sign In</MenuItem>
-        
+
 
         <Link to="/Signup"><MenuItem onClick={this.handleClose}>Sign Up</MenuItem></Link>
       </Menu>
@@ -244,15 +244,18 @@ class PrimarySearchAppBar extends React.Component {
 
         <Dialog open={this.state.open} onClose={this.handleClose} aria-labelledby="alert-dialog-title"
           aria-describedby="alert-dialog-description" disableBackdropClick >
-          
+
           <DialogTitle id="alert-dialog-title"> </DialogTitle>
           <DialogContent>
-           {Login}
+            <div>
+              <Login />
+
+            </div>
           </DialogContent>
 
           <DialogActions>
             <Button onClick={this.handleClose} color="primary">Close</Button>
-            <Button onClick={this.handleClose} color="primary" autoFocus>View</Button>
+            
           </DialogActions>
         </Dialog>
         {renderMenu}
