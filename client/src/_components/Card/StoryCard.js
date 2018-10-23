@@ -9,23 +9,26 @@ class StoryCard extends Component {
         this.state = {
             productIndex: '',
             productImageName: '',
+            storyname: "",
+            description:"",
         }
     }
-    cardClick = (id, imgname, e) => {
-        this.setState({ productIndex: id, productImageName: imgname });
+    cardClick = (id, imgname,a,b, e) => {
+        this.setState({ productIndex: id, productImageName: imgname, storyname:a, description:b });
 
-        alert(id + " " + imgname + " card clicked");
+        alert(id + " " + imgname +" "+a +" "+b+" card clicked");
     }
 
     render() {
         if (this.state.productIndex !== '') {
-            return <Redirect to='/ViewStory' />
+            return <Redirect to='/ViewStory' storyname={this.state.storyname} description={this.state.description} />
         }
 
         return (
+
             <div className="card"
                 onClick={(e) =>
-                    this.cardClick(this.props.products.id, this.props.products.ImageAddress, e)}
+                    this.cardClick(this.props.products.id, this.props.products.ImageAddress,this.props.products.StoryName,this.props.products.Description, e)}
             >
 
                 <h2>{this.props.products.StoryName}</h2>

@@ -23,6 +23,7 @@ import MailIcon from '@material-ui/icons/Mail';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import { Link } from 'react-router-dom';
 import Login from '../Login/Login.js';
+import SignUp from '../SignUp/Signup.js';
 const styles = theme => ({
   root: {
     width: '100%',
@@ -94,6 +95,8 @@ class PrimarySearchAppBar extends React.Component {
   state = {
     anchorEl: null,
     mobileMoreAnchorEl: null,
+    toogler: '',
+    signupin:'',
   };
 
   handleProfileMenuOpen = event => {
@@ -112,12 +115,16 @@ class PrimarySearchAppBar extends React.Component {
   handleMobileMenuClose = () => {
     this.setState({ mobileMoreAnchorEl: null });
   };
-  handleClickOpen = () => {
-    this.handleClose
-    this.setState({ open: true });
+  handlesignupClick = () => {
+    this.setState({open:true,  toogler:"signup", signupin:<SignUp/>});
+
   };
+  handlesigninClick = () => {
+    this.setState({open:true, toogler: "signin", signupin:<Login/> })
+  }
+
   handleClose = () => {
-    this.setState({ open: false });
+    this.setState({ open: false  });
   };
 
 
@@ -127,6 +134,15 @@ class PrimarySearchAppBar extends React.Component {
     const isMenuOpen = Boolean(anchorEl);
     const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
+    // var signupin;
+    // if (this.state.toogler === "signin") {
+    //   signupin=<Login/>
+    // }
+    // else if(this.state.toogler==="signup"){
+    //       signupin = <SignUp />
+
+    // }
+    
     const renderMenu = (
       <Menu
         anchorEl={anchorEl}
@@ -135,10 +151,8 @@ class PrimarySearchAppBar extends React.Component {
         open={isMenuOpen}
         onClose={this.handleMenuClose}
       >
-        <MenuItem onClick={this.handleClickOpen}>Sign In</MenuItem>
-
-
-        <Link to="/Signup"><MenuItem onClick={this.handleClose}>Sign Up</MenuItem></Link>
+        <MenuItem onClick={this.handlesigninClick}>Sign In</MenuItem>
+        <MenuItem onClick={this.handlesignupClick}>Sign Up</MenuItem>
       </Menu>
     );
 
@@ -178,7 +192,7 @@ class PrimarySearchAppBar extends React.Component {
       <div className={classes.root}>
         <AppBar position="static">
           <Toolbar>
-            {/*------------- STORIFYHOME BTN------------ */}
+            {/*------------- HOME BUTTON------------ */}
 
             <Typography className={classes.title} variant="title" color="inherit" noWrap>
               <Link to="/Home" className="bigStorify">
@@ -244,20 +258,18 @@ class PrimarySearchAppBar extends React.Component {
 
         <Dialog open={this.state.open} onClose={this.handleClose} aria-labelledby="alert-dialog-title"
           aria-describedby="alert-dialog-description" disableBackdropClick >
-
           <DialogTitle id="alert-dialog-title"> </DialogTitle>
           <DialogContent>
             <div>
-              <Login />
-
+              {this.state.signupin}
+              {/* <Login /> */}
             </div>
           </DialogContent>
-
           <DialogActions>
             <Button onClick={this.handleClose} color="primary">Close</Button>
-            
-          </DialogActions>
+        </DialogActions>
         </Dialog>
+
         {renderMenu}
         {renderMobileMenu}
       </div>

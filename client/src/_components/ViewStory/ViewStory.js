@@ -5,6 +5,12 @@ import Grid from '@material-ui/core/Grid';
 import { Link } from 'react-router-dom';
 
 class ViewStory extends Component {
+    constructor() {
+        super();
+        this.state = {
+            
+        }
+    }
 
     cardStyle={
         margin: '10px 400px 100px 400px',
@@ -22,7 +28,11 @@ class ViewStory extends Component {
                 </div>
                 <div style={{height:'100px', backgroundColor:'#b5b5b5'}}></div>
 
-                <Card  style={this.cardStyle}> this is a story page</Card>
+                <Card style={this.cardStyle}>
+                    <div>
+                        {this.props.storyname}
+                        this is a story page
+                    </div>    </Card>
             <div>
                 {this.props.productIndex}
             </div>
