@@ -2,7 +2,7 @@
   "name": "storify",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://sameersitre.github.io/Storify-project/",
+  "homepage": "https://sameersitre.github.io/Storify-project/#/Home",
   "dependencies": {
     "ajv": "^6.5.2",
     "antd": "^3.7.2",

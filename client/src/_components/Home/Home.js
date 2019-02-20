@@ -35,11 +35,11 @@ class Home extends Component {
                 </div>
             </div> */}
            
-                <Grid container className={classes.demo} justify="center" spacing={32}>
+                <Grid container className={classes.demo} justify="center" >
                     {Stories.map((value, index) =>
-                        (<Grid val={value} item={true}>
+                        (<div val={value} item={true}>
                             <StoryCard className={classes.paper} products={value} key={index} />
-                        </Grid>
+                        </div>
                         ))}
                 </Grid>
             </div></div>

@@ -3,11 +3,13 @@ import { Redirect } from 'react-router-dom';
 import Avatar from '@material-ui/core/Avatar';
 import Tooltip from '@material-ui/core/Tooltip';
 import './StoryCard.css';
+import ViewStory from '../ViewStory/ViewStory.js';
 class StoryCard extends Component {
     constructor() {
         super();
         this.state = {
             productIndex: '',
+
             productImageName: '',
             storyname: "",
             description:"",
@@ -16,12 +18,15 @@ class StoryCard extends Component {
     cardClick = (id, imgname,a,b, e) => {
         this.setState({ productIndex: id, productImageName: imgname, storyname:a, description:b });
 
-        alert(id + " " + imgname +" "+a +" "+b+" card clicked");
+        alert(id + " " + imgname + " " + a + " " + b + " card clicked");
+        // <ViewStory storyname={this.state.storyname} description={this.state.description} />
     }
 
     render() {
         if (this.state.productIndex !== '') {
-            return <Redirect to='/ViewStory' storyname={this.state.storyname} description={this.state.description} />
+            return(
+            <Redirect to='/ViewStory' storyn={this.state.storyname} descrip={this.state.description} />)
+            // return (<div><ViewStory storyname={this.state.storyname} description={this.state.description} /></div>)
         }
 
         return (

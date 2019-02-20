@@ -31,11 +31,10 @@ class Signup extends Component {
                         <Input placeholder="Confirm Password" type="password" />
                     </div>
                     <div className="signUp">
-                        <Link to="/Login">
+                        <Link to="/Home">
                             <Button color="secondary" variant="contained" style={{background:"#17ad8d", fontFamily:"monospace",fontSize:"16px"}}>Create My Storify Account</Button>
                         </Link>
                     </div>
-                    <p className="gotoLogin">Already Have an Account?<Link to="/Login" style={{ color: "blue" }}>Signin</Link></p>
                 </div>
             </div>
         )

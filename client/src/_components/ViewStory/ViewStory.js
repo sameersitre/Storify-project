@@ -30,7 +30,8 @@ class ViewStory extends Component {
 
                 <Card style={this.cardStyle}>
                     <div>
-                        {this.props.storyname}
+                        {this.props.storyn && this.props.storyn.referrer}
+                        {this.props.descrip}
                         this is a story page
                     </div>    </Card>
             <div>
